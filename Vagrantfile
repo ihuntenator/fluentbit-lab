@@ -14,7 +14,8 @@ cat <<- 'EOF' > /etc/yum.repos.d/td-agent-bit.repo
 	enabled=1
 EOF
 yum install -y td-agent-bit
-yum update
+yum update -y
+sudo service td-agent-bit start
 SCRIPT
 
 # tdagentbit VM
